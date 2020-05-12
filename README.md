@@ -1,5 +1,5 @@
 # curso-ES6
-# Curso Introdutório sobre EcmaScript 6
+Curso Introdutório sobre EcmaScript 6
 
 
 # 1- Uso do BABEL
