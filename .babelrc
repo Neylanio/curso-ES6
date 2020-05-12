@@ -1,0 +1,7 @@
+{
+    "presets" : ["@babel/preset-env"]
+}
+
+//babel e utilizado para transpilar o codigo ao navegador para que o mesmo consiga entender
+
+//presets sao utilizados para definir para qual ambiente o babel precisa de preocupar, nesse caso o ambiente WEB

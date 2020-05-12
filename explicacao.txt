@@ -1,0 +1,10 @@
+1 - O uso do babel e importante pois so assim o(s) navegador(es) pode(m) entender o EcmaScript
+
+2 - O uso do bundle.js e para espelhar e transformar todo o jscript da main.js em EcmaScript. 
+OBS: De maneira que e preciso definir no package.json para qual arquivo '.js' o babel irá apontar
+
+3 - É preciso definir para qual plataforma vai agir. Nesse caso será para web, entao usa-se o 'preset-env'
+
+4 - O uso do '-w' la no package.json no command 'dev' é para que o bundle sempre fique atento a cada alteracao 
+de escrita no codigo do main.js, sem precisar que a cada alteracao o dev precise sempre colocar no terminal
+"yarn dev". Bastando assim fazer apenas uma vez antes de começar a agir no projeto
