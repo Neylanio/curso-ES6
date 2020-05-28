@@ -90,11 +90,11 @@
 /*!**********************!*\
   !*** ./functions.js ***!
   \**********************/
-/*! exports provided: soma */
+/*! exports provided: default, soma, sub */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"soma\", function() { return soma; });\nfunction soma(a, b) {\n  return a + b;\n}\n\n//# sourceURL=webpack:///./functions.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return mult; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"soma\", function() { return soma; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"sub\", function() { return sub; });\nfunction mult(a, b) {\n  return a * b;\n}\nfunction soma(a, b) {\n  return a + b;\n}\nfunction sub(a, b) {\n  return a - b;\n}\n\n//# sourceURL=webpack:///./functions.js?");
 
 /***/ }),
 
@@ -106,7 +106,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _functions_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./functions.js */ \"./functions.js\");\n\nconsole.log(Object(_functions_js__WEBPACK_IMPORTED_MODULE_0__[\"soma\"])(1, 3));\n\n//# sourceURL=webpack:///./main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _functions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./functions */ \"./functions.js\");\n//Trabalhando com import e exports\n\nconsole.log(Object(_functions__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(4, 6));\n\nconsole.log(Object(_functions__WEBPACK_IMPORTED_MODULE_0__[\"soma\"])(2, 3));\nconsole.log(Object(_functions__WEBPACK_IMPORTED_MODULE_0__[\"sub\"])(4, 2));\n\nconsole.log(_functions__WEBPACK_IMPORTED_MODULE_0__[\"soma\"](4, 3));\n\n//# sourceURL=webpack:///./main.js?");
 
 /***/ })
 
