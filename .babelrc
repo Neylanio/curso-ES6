@@ -1,6 +1,7 @@
 {
-    "presets" : ["@babel/preset-env"]
-}
+    "presets" : ["@babel/preset-env"],
+    "plugins" : ["@babel/plugin-proposal-object-rest-spread"]
+} 
 
 //babel e utilizado para transpilar o codigo ao navegador para que o mesmo consiga entender
 
