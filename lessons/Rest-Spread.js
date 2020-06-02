@@ -14,6 +14,10 @@ const usuario1 = {
     }
 };
 
-const usuario2 = { ...usuario1, nome: 'Soares', endereco: {cidade: 'Crato'} }
+const another = { ...usuario1, nome: 'Rochinha' };
 
-console.log(usuario2);
+console.log(another)
+
+// const usuario2 = { ...usuario1, nome: 'Soares', endereco: {cidade: 'Crato'} }
+
+// console.log(usuario2);

@@ -11,3 +11,5 @@ async function executaPromise(){
 }
 
 executaPromise();
+
+

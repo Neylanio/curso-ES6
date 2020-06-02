@@ -13,9 +13,9 @@
 
 export let idade = 23;
 
-export function setIdade(a){
-    idade = a;
-}
+// export function setIdade(a){
+//     idade = a;
+// }
 
 export class Usuario {
  static info() {
