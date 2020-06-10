@@ -1,15 +1,18 @@
 //Trabalhando com Async Await
 
-const minhaPromise = () => new Promise((resolve, reject) => {
-    setTimeout(() => {resolve('OK')}, 2000);
-});
+// const minhaPromise = () => new Promise((resolve, reject) => {
+//     setTimeout(() => {resolve('OK')}, 2000);
+// });
 
-async function executaPromise(){
-    console.log(await minhaPromise());
-    console.log(await minhaPromise());
-    console.log(await minhaPromise());
-}
+// async function executaPromise(){
+//     console.log(await minhaPromise());
+//     console.log(await minhaPromise());
+//     console.log(await minhaPromise());
+// }
 
-executaPromise();
+// executaPromise();
+
+
+
 
 
