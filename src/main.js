@@ -15,6 +15,22 @@ class App {
     this.formEl.onsubmit = event => this.addRepository(event);
   }
 
+  setLoading(loading = true){
+    if(loading){
+  
+      let loadingEl = document.createElement('span');
+      loadingEl.appendChild(document.createTextNode('Loading...'));
+      loadingEl.setAttribute('id', 'loading');
+  
+      this.formEl.appendChild(loadingEl);
+
+    }else{
+
+      document.getElementById('loading').remove();
+
+    }
+  }
+
   async addRepository(event) {
     event.preventDefault(); // Para nao redirecionar à outra página quando clicar no BOTÃO submit
     
@@ -22,29 +38,32 @@ class App {
 
     if(repoInput.length === 0) return;
 
+    this.setLoading();
+    
     try {
       
       const response = await api.get(`/repos/${repoInput}`);
-
+      
       const { name, description, owner: { avatar_url }, html_url } = response.data
-
+      
       const repository = {
         name,
         description,
         avatar_url,
         html_url,
       };      
-
+      
       this.repositories.push(repository);
-  
+      
       this.inputEl.value = '';
       this.render();
-
+      
     } catch {
       alert('Repositório não existe')
     }
-
-
+    
+    this.setLoading(false);
+    
   }
 
   render(){
