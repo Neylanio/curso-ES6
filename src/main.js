@@ -1,8 +1,11 @@
+import api from './api';
+
 class App {
   constructor(){
     this.repositories = [];
 
     this.formEl = document.getElementById('repo-form');
+    this.inputEl = document.querySelector('input[name=repository]');
     this.listEl = document.getElementById('repo-list');
 
     this.registerHandlers();
@@ -12,17 +15,36 @@ class App {
     this.formEl.onsubmit = event => this.addRepository(event);
   }
 
-  addRepository(event) {
+  async addRepository(event) {
     event.preventDefault(); // Para nao redirecionar à outra página quando clicar no BOTÃO submit
     
-    this.repositories.push({
-      name: 'Neylanio',
-      description: 'Profile Github',
-      avatar_url: 'https://avatars1.githubusercontent.com/u/15330671?v=4',
-      html_url: 'http://github.com/Neylanio',
-    });
+    const repoInput = this.inputEl.value;
 
-    this.render();
+    if(repoInput.length === 0) return;
+
+    try {
+      
+      const response = await api.get(`/repos/${repoInput}`);
+
+      const { name, description, owner: { avatar_url }, html_url } = response.data
+
+      const repository = {
+        name,
+        description,
+        avatar_url,
+        html_url,
+      };      
+
+      this.repositories.push(repository);
+  
+      this.inputEl.value = '';
+      this.render();
+
+    } catch {
+      alert('Repositório não existe')
+    }
+
+
   }
 
   render(){
@@ -39,7 +61,7 @@ class App {
       descriptionEl.appendChild(document.createTextNode(repo.description));
 
       let linkEl = document.createElement('a');
-      linkEl.setAttribute('href', '#');
+      linkEl.setAttribute('href', repo.html_url);
       linkEl.setAttribute('target', '_blank');
       linkEl.appendChild(document.createTextNode('Acessar'));
 

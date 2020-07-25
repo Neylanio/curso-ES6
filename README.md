@@ -10,4 +10,5 @@
 > - Use of Babel
 > - Use of bundle.js
 > - Use of package.json
-> - There are some examples about: Classes, Functions, Arrow functions, Webpack, [ Map, Reduce, Find, Filter ]
+> - There are some examples about: Classes, Functions, Arrow functions, Webpack, [Map, Reduce, Find, Filter]
+> - Axios
