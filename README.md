@@ -1,8 +1,13 @@
-# curso-ES6
-Curso Introdutório sobre EcmaScript 6
+# ES6 Course
 
+- Start project
+> 'yarn' command in the TERMINAL
 
-# 1- Uso do BABEL
-# 2- Uso do bundle.js
-# 3- Uso do package.json
-# 4- Alguns exemplos sobre: Classes, Funcoes, ArrowFunction, WebPack 
+- Run project
+> 'yarn dev' command in the TERMINAL
+
+- Features
+> - Use of Babel
+> - Use of bundle.js
+> - Use of package.json
+> - There are some examples about: Classes, Functions, Arrow functions, Webpack, [ Map, Reduce, Find, Filter ]
